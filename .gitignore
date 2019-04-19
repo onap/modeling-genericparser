@@ -1,0 +1,8 @@
+logs/*.log
+*.pyc
+.idea
+.tox
+target
+htmlcov
+.coverage
+test-reports/*
