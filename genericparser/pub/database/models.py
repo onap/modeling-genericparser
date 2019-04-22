@@ -35,7 +35,7 @@ class NSPackageModel(models.Model):
     nsdModel = models.TextField(db_column='NSDMODEL', max_length=65535, null=True, blank=True)
 
     class Meta:
-        db_table = 'CATALOG_NSPACKAGE'
+        db_table = 'GENERICPARSER_NSPACKAGE'
 
 
 class ServicePackageModel(models.Model):
@@ -58,7 +58,7 @@ class ServicePackageModel(models.Model):
     servicedModel = models.TextField(db_column='SERVICEDMODEL', max_length=65535, null=True, blank=True)
 
     class Meta:
-        db_table = 'CATALOG_SERVICEPACKAGE'
+        db_table = 'GENERICPARSER_SERVICEPACKAGE'
 
 
 class VnfPackageModel(models.Model):
@@ -81,7 +81,7 @@ class VnfPackageModel(models.Model):
     vnfdModel = models.TextField(db_column='VNFDMODEL', max_length=65535, blank=True, null=True)  # vnfd
 
     class Meta:
-        db_table = 'CATALOG_VNFPACKAGE'
+        db_table = 'GENERICPARSER_VNFPACKAGE'
 
 
 class PnfPackageModel(models.Model):
@@ -104,7 +104,7 @@ class PnfPackageModel(models.Model):
     pnfdName = models.TextField(db_column='PNFDNAME', max_length=65535, blank=True, null=True)  # pnfd_name
 
     class Meta:
-        db_table = 'CATALOG_PNFPACKAGE'
+        db_table = 'GENERICPARSER_PNFPACKAGE'
 
 
 class SoftwareImageModel(models.Model):
@@ -124,7 +124,7 @@ class SoftwareImageModel(models.Model):
     # purpose = models.CharField(db_column='PURPOSE', max_length=1000)
 
     class Meta:
-        db_table = 'CATALOG_SOFTWAREIMAGEMODEL'
+        db_table = 'GENERICPARSER_SOFTWAREIMAGEMODEL'
 
 
 class JobModel(models.Model):
@@ -141,7 +141,7 @@ class JobModel(models.Model):
     resname = models.CharField(db_column='RESNAME', max_length=255, null=True, blank=True)
 
     class Meta:
-        db_table = 'CATALOG_JOB'
+        db_table = 'GENERICPARSER_JOB'
 
     def toJSON(self):
         import json
@@ -158,7 +158,7 @@ class JobStatusModel(models.Model):
     addtime = models.CharField(db_column='ADDTIME', max_length=255, null=True, blank=True)
 
     class Meta:
-        db_table = 'CATALOG_JOB_STATUS'
+        db_table = 'GENERICPARSER_JOB_STATUS'
 
     def toJSON(self):
         import json
@@ -192,7 +192,7 @@ class NsdmSubscriptionModel(models.Model):
     links = models.TextField(db_column='LINKS')
 
     class Meta:
-        db_table = 'CATALOG_NSDM_SUBSCRIPTION'
+        db_table = 'GENERICPARSER_NSDM_SUBSCRIPTION'
 
     def toJSON(self):
         import json
