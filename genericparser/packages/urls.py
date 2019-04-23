@@ -25,10 +25,10 @@ from genericparser.packages.views.health_check_views import HealthCheckView
 urlpatterns = [
 
     # Sync package from SDC
-    url(r'^api/genericparser/v1/nspackages$', catalog_views.nspackages_rc, name='nspackages_rc'),
-    url(r'^api/genericparser/v1/nspackages/(?P<csarId>[0-9a-zA-Z\-\_]+)$', catalog_views.ns_rd_csar, name='nspackage_rd'),
-    url(r'^api/genericparser/v1/vnfpackages$', catalog_views.nfpackages_rc, name='nfpackages_rc'),
-    url(r'^api/genericparser/v1/vnfpackages/(?P<csarId>[0-9a-zA-Z\-\_]+)$', catalog_views.nf_rd_csar, name='nfpackage_rd'),
+    url(r'^api/parser/v1/nspackages$', catalog_views.nspackages_rc, name='nspackages_rc'),
+    url(r'^api/parser/v1/nspackages/(?P<csarId>[0-9a-zA-Z\-\_]+)$', catalog_views.ns_rd_csar, name='nspackage_rd'),
+    url(r'^api/parser/v1/vnfpackages$', catalog_views.nfpackages_rc, name='nfpackages_rc'),
+    url(r'^api/parser/v1/vnfpackages/(?P<csarId>[0-9a-zA-Z\-\_]+)$', catalog_views.nf_rd_csar, name='nfpackage_rd'),
     url(r'^api/parser/v1/service_packages$', catalog_views.servicepackages_rc, name='servicepackages_rc'),
     url(r'^api/parser/v1/service_packages/(?P<csarId>[0-9a-zA-Z\-\_]+)$', catalog_views.service_rd_csar, name='servicepackage_rd'),
 
@@ -37,9 +37,6 @@ urlpatterns = [
     url(r'^api/parser/v1/parsernsd$', catalog_views.ns_model_parser, name='nsmodelparser_rc'),
     url(r'^api/parser/v1/parservnfd$', catalog_views.vnf_model_parser, name='vnfmodelparser_rc'),
     url(r'^api/parser/v1/parserpnfd$', pnf_descriptor_views.pnf_model_parser, name='pnfmodelparser_rc'),
-    url(r'^api/genericparser/v1/parsernsd$', catalog_views.ns_model_parser, name='nsmodelparser_rc'),
-    url(r'^api/genericparser/v1/parservnfd$', catalog_views.vnf_model_parser, name='vnfmodelparser_rc'),
-    url(r'^api/genericparser/v1/parserpnfd$', pnf_descriptor_views.pnf_model_parser, name='pnfmodelparser_rc'),
 
     # ETSI SOL005 NSD API
     url(r'^api/nsd/v1/ns_descriptors$', ns_descriptor_views.ns_descriptors_rc, name='ns_descriptors_rc'),
@@ -71,6 +68,5 @@ urlpatterns = [
     # health check
     url(r'^api/vnfpkgm/v1/health_check$', HealthCheckView.as_view()),
     url(r'^api/nsd/v1/health_check$', HealthCheckView.as_view()),
-    url(r'^api/genericparser/v1/health_check$', HealthCheckView.as_view()),
     url(r'^api/parser/v1/health_check$', HealthCheckView.as_view()),
 ]
