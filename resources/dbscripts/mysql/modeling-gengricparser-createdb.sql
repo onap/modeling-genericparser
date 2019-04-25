@@ -17,12 +17,12 @@
 /******************create database and user***************************/
 use mysql;
 
-create database if not exists nfvocatalog CHARACTER SET utf8;
+create database if not exists genericpaser CHARACTER SET utf8;
 
 
-GRANT ALL PRIVILEGES ON nfvocatalog.* TO 'nfvocatalog'@'%' IDENTIFIED BY 'nfvocatalog' WITH GRANT OPTION;
-GRANT ALL PRIVILEGES ON mysql.* TO 'nfvocatalog'@'%' IDENTIFIED BY 'nfvocatalog' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON genericpaser.* TO 'genericpaser'@'%' IDENTIFIED BY 'genericpaser' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON mysql.* TO 'genericpaser'@'%' IDENTIFIED BY 'genericpaser' WITH GRANT OPTION;
 
-GRANT ALL PRIVILEGES ON nfvocatalog.* TO 'nfvocatalog'@'localhost' IDENTIFIED BY 'nfvocatalog' WITH GRANT OPTION;
-GRANT ALL PRIVILEGES ON mysql.* TO 'nfvocatalog'@'localhost' IDENTIFIED BY 'nfvocatalog' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON genericpaser.* TO 'genericpaser'@'localhost' IDENTIFIED BY 'genericpaser' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON mysql.* TO 'genericpaser'@'localhost' IDENTIFIED BY 'genericpaser' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
