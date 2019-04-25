@@ -76,5 +76,5 @@
             </includes>
         </fileSet>
     </fileSets>
-    <baseDirectory>modeling/toscaparsers/genericparser</baseDirectory>
+    <baseDirectory>modeling/genericparser</baseDirectory>
 </assembly>

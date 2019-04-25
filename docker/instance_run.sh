@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /service/modeling/toscaparsers/genericparser
+cd /service/modeling/genericparser
 
 ./run.sh
 

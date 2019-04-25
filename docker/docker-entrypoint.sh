@@ -34,12 +34,12 @@ for i in {1..5}; do
 done
 
 # Configure service based on docker environment variables
-modeling/toscaparsers/genericparser/docker/instance_config.sh
+modeling/genericparser/docker/instance_config.sh
 
 # microservice-specific one-time initialization
-modeling/toscaparsers/genericparser/docker/instance_init.sh
+modeling/genericparser/docker/instance_init.sh
 
 date > init.log
 
 # Start the microservice
-modeling/toscaparsers/genericparser/docker/instance_run.sh
+modeling/genericparser/docker/instance_run.sh

@@ -9,12 +9,12 @@ install_sf(){
 
     # get binary zip from nexus - vfc-nfvo-genericparser
 
-    wget -q -O modeling-genericparser.zip 'https://nexus.onap.org/service/local/artifact/maven/redirect?r=snapshots&g=org.onap.modeling.toscaparsers.genericparser&a=modeling-toscaparsers-genericparserr&v=LATEST&e=zip' && \
+    wget -q -O modeling-genericparser.zip 'https://nexus.onap.org/service/local/artifact/maven/redirect?r=snapshots&g=org.onap.modeling.genericparser&a=modeling-genericparserr&v=LATEST&e=zip' && \
     unzip modeling-genericparser.zip && \
     rm -rf modeling-genericparser.zip && \
     pip install --upgrade setuptools pip  && \
 
-    pip install --no-cache-dir --pre -r  /service/modeling/toscaparsers/genericparser/requirements.txt
+    pip install --no-cache-dir --pre -r  /service/modeling/genericparser/requirements.txt
 }
 
 add_user(){

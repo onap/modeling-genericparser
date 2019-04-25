@@ -13,13 +13,13 @@ fi
 
 function create_database {
 
-    cd /service/modeling/toscaparsers/genericparser/resources/bin
+    cd /service/modeling/genericparser/resources/bin
     bash initDB.sh $MYSQL_ROOT_USER $MYSQL_ROOT_PASSWORD $MYSQL_PORT $MYSQL_IP
 
  }
 
 function migrate_database {
-    cd /service/modeling/toscaparsers/genericparser
+    cd /service/modeling/genericparser
     python manage.py migrate
 }
 
