@@ -24,9 +24,9 @@ REDIS_PASSWD = ''
 # [mysql]
 DB_IP = "127.0.0.1"
 DB_PORT = 3306
-DB_NAME = "genericpaser"
-DB_USER = "genericpaser"
-DB_PASSWD = "genericpaser"
+DB_NAME = "genericparser"
+DB_USER = "genericparser"
+DB_PASSWD = "genericparser"
 
 # [MDC]
 SERVICE_NAME = "genericparser"

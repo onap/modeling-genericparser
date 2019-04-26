@@ -23,14 +23,14 @@ fi
 
 
 if [ ${SSL_ENABLED} = "true" ]; then
-    nohup uwsgi --https :8806,genericpaser/pub/ssl/cert/foobar.crt,genericpaser/pub/ssl/cert/foobar.key, -t 120 --module genericpaser.wsgi --master --processes 4 &
+    nohup uwsgi --https :8806,genericparser/pub/ssl/cert/foobar.crt,genericparser/pub/ssl/cert/foobar.key, -t 120 --module genericparser.wsgi --master --processes 4 &
 else
-    nohup uwsgi --http :8806 -t 120 --module genericpaser.wsgi --master --processes 4 &
+    nohup uwsgi --http :8806 -t 120 --module genericparser.wsgi --master --processes 4 &
 fi
 
 
-while [ ! -f $logDir/runtime_genericpaser.log ]; do
+while [ ! -f $logDir/runtime_genericparser.log ]; do
     sleep 1
 done
 
-tail -F  $logDir/runtime_genericpaser.log
+tail -F  $logDir/runtime_genericparser.log

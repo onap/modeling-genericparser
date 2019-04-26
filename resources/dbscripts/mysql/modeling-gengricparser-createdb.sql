@@ -17,12 +17,12 @@
 /******************create database and user***************************/
 use mysql;
 
-create database if not exists genericpaser CHARACTER SET utf8;
+create database if not exists genericparser CHARACTER SET utf8;
 
 
-GRANT ALL PRIVILEGES ON genericpaser.* TO 'genericpaser'@'%' IDENTIFIED BY 'genericpaser' WITH GRANT OPTION;
-GRANT ALL PRIVILEGES ON mysql.* TO 'genericpaser'@'%' IDENTIFIED BY 'genericpaser' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON genericparser.* TO 'genericparser'@'%' IDENTIFIED BY 'genericparser' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON mysql.* TO 'genericparser'@'%' IDENTIFIED BY 'genericparser' WITH GRANT OPTION;
 
-GRANT ALL PRIVILEGES ON genericpaser.* TO 'genericpaser'@'localhost' IDENTIFIED BY 'genericpaser' WITH GRANT OPTION;
-GRANT ALL PRIVILEGES ON mysql.* TO 'genericpaser'@'localhost' IDENTIFIED BY 'genericpaser' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON genericparser.* TO 'genericparser'@'localhost' IDENTIFIED BY 'genericparser' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON mysql.* TO 'genericparser'@'localhost' IDENTIFIED BY 'genericparser' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
