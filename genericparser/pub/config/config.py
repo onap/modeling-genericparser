@@ -39,7 +39,7 @@ REG_TO_MSB_REG_URL = "/api/microservices/v1/services"
 REG_TO_MSB_REG_PARAM = [{
     "serviceName": "genericparser",
     "version": "v1",
-    "url": "/api/genericparser/v1",
+    "url": "/api/parser/v1",
     "protocol": "REST",
     "visualRange": "1",
     "nodes": [{
