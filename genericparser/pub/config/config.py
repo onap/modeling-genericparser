@@ -37,7 +37,7 @@ FORWARDED_FOR_FIELDS = ["HTTP_X_FORWARDED_FOR", "HTTP_X_FORWARDED_HOST",
 REG_TO_MSB_WHEN_START = True
 REG_TO_MSB_REG_URL = "/api/microservices/v1/services"
 REG_TO_MSB_REG_PARAM = [{
-    "serviceName": "genericparser",
+    "serviceName": "parser",
     "version": "v1",
     "url": "/api/parser/v1",
     "protocol": "REST",
