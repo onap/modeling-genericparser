@@ -16,5 +16,5 @@ from django.conf.urls import url
 from genericparser.jobs.views import JobView
 
 urlpatterns = [
-    url(r'^api/genericparser/v1/jobs/(?P<job_id>[0-9a-zA-Z_-]+)$', JobView.as_view()),
+    url(r'^api/parser/v1/jobs/(?P<job_id>[0-9a-zA-Z_-]+)$', JobView.as_view()),
 ]

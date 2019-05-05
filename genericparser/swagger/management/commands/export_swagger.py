@@ -30,7 +30,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         self.client = Client()
-        response = self.client.get("/api/genericparser/v1/swagger.json")
+        response = self.client.get("/api/parser/v1/swagger.json")
         with open(options['name'], 'w') as swagger_file:
             swagger_file.write(json.dumps(response.data))
         print "swagger api is written to %s" % options['name']

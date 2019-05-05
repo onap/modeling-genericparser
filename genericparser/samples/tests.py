@@ -41,5 +41,5 @@ class CallbackSampleTest(unittest.TestCase):
         pass
 
     def test_callback(self):
-        response = self.client.get("/api/genericparser/v1/callback_sample")
+        response = self.client.get("/api/parser/v1/callback_sample")
         self.assertEqual(status.HTTP_204_NO_CONTENT, response.status_code, response.content)

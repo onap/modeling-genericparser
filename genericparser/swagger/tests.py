@@ -23,6 +23,6 @@ class SwaggerViewTest(unittest.TestCase):
         pass
 
     def test_swagger(self):
-        response = self.client.get("/api/genericparser/v1/swagger.json")
+        response = self.client.get("/api/parser/v1/swagger.json")
         self.assertEqual(status.HTTP_200_OK, response.status_code, response.content)
         self.assertEqual("2.0", response.data.get("swagger"))

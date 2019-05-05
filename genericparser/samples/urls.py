@@ -16,7 +16,7 @@ from django.conf.urls import url
 from genericparser.samples import views
 
 urlpatterns = [
-    url(r'^api/genericparser/v1/mandb/(?P<modelName>[a-zA-Z\-]+)$', views.TablesList.as_view()),
-    url(r'^api/genericparser/v1/callback_sample$', views.CallbackSample.as_view()),
+    url(r'^api/parser/v1/mandb/(?P<modelName>[a-zA-Z\-]+)$', views.TablesList.as_view()),
+    url(r'^api/parser/v1/callback_sample$', views.CallbackSample.as_view()),
     url(r'^samples/$', views.SampleList.as_view())
 ]
