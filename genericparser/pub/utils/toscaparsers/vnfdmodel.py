@@ -17,7 +17,7 @@ import logging
 from genericparser.pub.config.config import VNFD_SCHEMA_VERSION_DEFAULT
 from genericparser.pub.utils.toscaparsers.basemodel import BaseInfoModel
 from genericparser.pub.utils.toscaparsers.vnfdparser import CreateVnfdSOLParser
-# from genericparser.pub.exceptions import CatalogException
+
 
 logger = logging.getLogger(__name__)
 

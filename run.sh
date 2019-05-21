@@ -15,7 +15,7 @@
 
 logDir="/var/log/onap/modeling/genericparser/"
 if [ ! -x  $logDir  ]; then
-       mkdir -p $logDir
+    mkdir -p $logDir
 fi
 
 # nohup python manage.py runserver 0.0.0.0:8806 > /dev/null &
@@ -27,10 +27,3 @@ if [ "${SSL_ENABLED}" = "true" ]; then
 else
     nohup uwsgi --http :8806 -t 120 --module genericparser.wsgi --master --processes 4 &
 fi
-
-
-while [ ! -f $logDir/runtime_genericparser.log ]; do
-    sleep 1
-done
-
-tail -F  $logDir/runtime_genericparser.log
