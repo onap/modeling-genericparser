@@ -2,8 +2,8 @@ version: 1
 disable_existing_loggers: False
 
 loggers:
-    gengricparser:
-        handlers: [gengricparserlocal_handler, gengricparser_handler]
+    genericparser:
+        handlers: [genericparserlocal_handler, genericparser_handler]
         level: "DEBUG"
         propagate: False
     django:
@@ -11,20 +11,20 @@ loggers:
         level: "DEBUG"
         propagate: False
 handlers:
-    gengricparserlocal_handler:
+    genericparserlocal_handler:
         level: "DEBUG"
         class:
             "logging.handlers.RotatingFileHandler"
-        filename: "logs/runtime_gengricparser.log"
+        filename: "logs/runtime_genericparser.log"
         formatter:
             "standard"
         maxBytes: 52428800
         backupCount: 10
-    gengricparser_handler:
+    genericparser_handler:
         level: "DEBUG"
         class:
             "logging.handlers.RotatingFileHandler"
-        filename: "/var/log/onap/modeling/genericparser/runtime_gengricparser.log"
+        filename: "/var/log/onap/modeling/genericparser/runtime_genericparser.log"
         formatter:
             "mdcFormat"
         maxBytes: 52428800
