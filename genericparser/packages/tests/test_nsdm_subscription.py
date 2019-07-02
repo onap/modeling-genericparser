@@ -30,6 +30,7 @@ class TestNsdmSubscription(TestCase):
         NsdmSubscriptionModel.objects.all().delete()
         self.subscription_id = str(uuid.uuid4())
         self.subscription = {
+            "filter": {},
             "callbackUri": "http://callbackuri.com",
             "authentication": {
                 "authType": ["BASIC"],
@@ -453,7 +454,7 @@ class TestNsdmSubscription(TestCase):
         expected_data = {
             "status": 404,
             "detail": "Subscription(" + self.subscription_id + ") "
-            "doesn't exists"
+                                                               "doesn't exists"
         }
         response = self.client.get('/api/nsd/v1/'
                                    'subscriptions/' + self.subscription_id,

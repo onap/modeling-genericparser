@@ -103,7 +103,9 @@ class TestVnfPackage(TestCase):
             "userDefinedData": {"a": "A"},
             "_links": None  # TODO
         }
-        self.assertEqual(expect_resp_data, resp_data)
+        # self.assertEqual(expect_resp_data, resp_data)
+        for key, value in expect_resp_data.items():
+            self.assertEqual(resp_data[key], value)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
     def test_query_single_vnf(self):
@@ -136,7 +138,9 @@ class TestVnfPackage(TestCase):
             "userDefinedData": {"a": "A"},
             "_links": None
         }
-        self.assertEqual(response.data, expect_data)
+        for key, value in expect_data.items():
+            self.assertEqual(response.data[key], value)
+        # self.assertEqual(response.data, expect_data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_query_single_vnf_failed(self):
@@ -203,7 +207,12 @@ class TestVnfPackage(TestCase):
                 "_links": None
             }
         ]
-        self.assertEqual(response.data, expect_data)
+        # self.assertEqual(response.data, expect_data)
+        self.assertEqual(len(response.data), len(expect_data))
+        for i in range(0, len(expect_data)):
+            for key, value in expect_data[i].items():
+                self.assertEqual(response.data[i][key], value)
+
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_delete_single_vnf_pkg(self):

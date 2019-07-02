@@ -78,7 +78,9 @@ class TestNsDescriptor(TestCase):
         )
         response.data.pop('id')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
-        self.assertEqual(expected_reponse_data, response.data)
+        # self.assertEqual(expected_reponse_data, response.data)
+        for key, value in expected_reponse_data.items():
+            self.assertEqual(response.data[key], value)
 
     def test_query_multiple_nsds_normal(self):
         expected_reponse_data = [
