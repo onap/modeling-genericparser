@@ -16,7 +16,7 @@ import os
 import sys
 import platform
 
-import redisco
+import genericparser.pub.redisco
 
 from genericparser.pub.config.config import REDIS_HOST, REDIS_PORT, REDIS_PASSWD
 from genericparser.pub.config.config import DB_NAME, DB_IP, DB_USER, DB_PASSWD, DB_PORT
@@ -117,7 +117,7 @@ DATABASES = {
     },
 }
 
-redisco.connection_setup(host=REDIS_HOST, port=REDIS_PORT, password=REDIS_PASSWD, db=0)
+genericparser.pub.redisco.connection_setup(host=REDIS_HOST, port=REDIS_PORT, password=REDIS_PASSWD, db=0)
 # CACHE_BACKEND = 'redis_cache.cache://%s@%s:%s' % (REDIS_PASSWD, REDIS_HOST, REDIS_PORT)
 
 TIME_ZONE = 'UTC'
