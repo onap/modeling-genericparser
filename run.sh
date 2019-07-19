@@ -18,12 +18,12 @@ if [ ! -x  $logDir  ]; then
     mkdir -p $logDir
 fi
 
-# nohup python manage.py runserver 0.0.0.0:8806 > /dev/null &
+nohup python manage.py runserver 0.0.0.0:8806 > /dev/null &
 # nohup uwsgi --http :8806 -t 120 --module genericparser.wsgi --master --processes 4 &
 
 
-if [ "${SSL_ENABLED}" = "true" ]; then
-    nohup uwsgi --https :8806,genericparser/pub/ssl/cert/foobar.crt,genericparser/pub/ssl/cert/foobar.key, -t 120 --module genericparser.wsgi --master --processes 4 &
-else
-    nohup uwsgi --http :8806 -t 120 --module genericparser.wsgi --master --processes 4 &
-fi
+# if [ "${SSL_ENABLED}" = "true" ]; then
+#     nohup uwsgi --https :8806,genericparser/pub/ssl/cert/foobar.crt,genericparser/pub/ssl/cert/foobar.key, -t 120 --module genericparser.wsgi --master --processes 4 &
+# else
+#     nohup uwsgi --http :8806 -t 120 --module genericparser.wsgi --master --processes 4 &
+# fi
