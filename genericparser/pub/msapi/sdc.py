@@ -50,7 +50,7 @@ sample of return value
         "invariantUUID": "63eaec39-ffbe-411c-a838-448f2c73f7eb",
         "name": "underlayvpn",
         "version": "2.0",
-        "toscaModelURL": "/sdc/v1/genericparser/resources/c94490a0-f7ef-48be-b3f8-8d8662a37236/toscaModel",
+        "toscaModelURL": "/sdc/v1/catalog/resources/c94490a0-f7ef-48be-b3f8-8d8662a37236/toscaModel",
         "category": "Volte",
         "subCategory": "VolteVF",
         "resourceType": "VF",
@@ -62,7 +62,7 @@ sample of return value
 
 
 def get_artifacts(asset_type):
-    resource = "/sdc/v1/genericparser/{assetType}"
+    resource = "/sdc/v1/catalog/{assetType}"
     resource = resource.format(assetType=asset_type)
     ret = call_sdc(resource, "GET")
     if ret[0] != 0:
@@ -84,7 +84,7 @@ def get_artifact(asset_type, csar_id):
 
 
 def delete_artifact(asset_type, asset_id, artifact_id):
-    resource = "/sdc/v1/genericparser/{assetType}/{uuid}/artifacts/{artifactUUID}"
+    resource = "/sdc/v1/catalog/{assetType}/{uuid}/artifacts/{artifactUUID}"
     resource = resource.format(assetType=asset_type, uuid=asset_id, artifactUUID=artifact_id)
     ret = call_sdc(resource, "DELETE")
     if ret[0] != 0:
