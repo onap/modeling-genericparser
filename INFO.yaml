@@ -3,37 +3,34 @@ project: 'modeling-genericparser'
 project_creation_date: '2019-02-05'
 project_category: ''
 lifecycle_state: 'Incubation'
-project_lead: &onap_releng_ptl
+project_lead: &onap_modeling_ptl
     name: 'Hui Deng'
     email: 'denghui12@huawei.com'
-    id: 'denghui02'
     company: 'Huawei'
+    id: 'denghui02'
     timezone: 'Asia/Shanghai'
-primary_contact: *onap_releng_ptl
+primary_contact: *onap_modeling_ptl
 issue_tracking:
     type: 'jira'
     url: 'https://jira.onap.org/projects/MODELING'
     key: 'MODELING'
+mailing_list:
+    type: 'groups.io'
+    url: 'https://lists.onap.org/g/onap-discuss'
+    tag: '[modeling]'
+realtime_discussion: ''
 meetings:
     - type: 'zoom'
       agenda: 'https://wiki.onap.org/display/DW/Modeling+Project+Meetings'
       url: 'https://wiki.onap.org/display/DW/Modeling+Project'
       server: 'n/a'
       channel: 'n/a'
-      repeats: 'weekly'
-      time: '01:00 UTC'
+      repeats: 'dual weekly'
+      time: '13:00 UTC'
+repositories:
+    - 'modeling-genericparser'
 committers:
-    - <<: *onap_releng_ptl
-    - name: 'maopeng zhang'
-      email: 'zhang.maopeng1@zte.com.cn'
-      company: 'ZTE'
-      id: 'maopengzhang'
-      timezone: 'Asia/Shanghai'
-    - name: 'Zhaoxing Meng'
-      email: 'meng.zhaoxing1@zte.com.cn'
-      company: 'ZTE'
-      id: 'Zhaoxing'
-      timezone: 'Asia/Shanghai'
+    - <<: *onap_modeling_ptl
     - name: 'Yuanhong Deng'
       email: 'dengyuanhong@chinamobile.com'
       company: 'CMCC'
@@ -44,21 +41,7 @@ tsc:
     changes:
         - type: 'Addition'
           name: 'Hui Deng'
-          link: 'https://wiki.onap.org/pages/viewpage.action?pageId=28381587'
-        - type: 'Addition'
-          name: 'maopeng zhang'
-          link: 'https://wiki.onap.org/pages/viewpage.action?pageId=28381587'
-        - type: 'Addition'
-          name: 'Zhaoxing Meng'
-          link: 'https://wiki.onap.org/pages/viewpage.action?pageId=28381587'
+          link: 'https://lists.onap.org/g/onap-tsc/message/3499'
         - type: 'Addition'
           name: 'Yuanhong Deng'
-          link: 'https://wiki.onap.org/display/DW/\
-            New+Committer+Promotion+Request+for+Modeling+genericparser'
-mailing_list:
-    type: 'groups.io'
-    url: 'lists.onap.org'
-    tag: '<[sub-project_name]>'
-realtime_discussion: ''
-repositories:
-    - 'genericparser'
+          link: 'https://lists.onap.org/g/onap-tsc/message/5221'
